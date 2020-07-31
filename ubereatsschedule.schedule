@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>1010608428427084</id>
+  <name>ubereatsschedule</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>ubereatsschedule1595913588448</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="concurrentBlock" id="6">
+          <project reference="4"/>
+          <name>ubereatsschedule:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>robots/ubereats</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>robots/ubereats</name>
+                <project>cs-web-extraction</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects&gt;
+    &lt;InputObject&gt;
+      &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
+      &lt;__variableName&gt;ubereatsschedule1595913588448#0#ubereatsschedule:middleBlock#0#robots/ubereats#init&lt;/__variableName&gt;
+      &lt;__propertyNames&gt;
+        &lt;string&gt;variableName&lt;/string&gt;
+        &lt;string&gt;name&lt;/string&gt;
+        &lt;string&gt;attributes&lt;/string&gt;
+      &lt;/__propertyNames&gt;
+      &lt;__name&gt;init&lt;/__name&gt;
+      &lt;__attributes&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;SHORT_TEXT&lt;/type&gt;
+          &lt;value&gt;Adelaide&lt;/value&gt;
+          &lt;__name&gt;firstcity&lt;/__name&gt;
+          &lt;required&gt;false&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;SHORT_TEXT&lt;/type&gt;
+          &lt;value&gt;Acai~~Allergy Friendly&lt;/value&gt;
+          &lt;__name&gt;firstfoodcategories&lt;/__name&gt;
+          &lt;required&gt;false&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;SHORT_TEXT&lt;/type&gt;
+          &lt;value&gt;Australia&lt;/value&gt;
+          &lt;__name&gt;country&lt;/__name&gt;
+          &lt;required&gt;false&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;SHORT_TEXT&lt;/type&gt;
+          &lt;__name&gt;countryurl&lt;/__name&gt;
+          &lt;required&gt;false&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+      &lt;/__attributes&gt;
+    &lt;/InputObject&gt;
+  &lt;/__inputObjects&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"0robots/ubereats":"robots/ubereats"}</displayNameMap>
+  </blockJob>
+  <totalRuns>73</totalRuns>
+  <active>true</active>
+  <useEmailNotification>false</useEmailNotification>
+  <previousRun id="10">2020-07-31 06:48:10.533 UTC</previousRun>
+  <nextRun id="11">2020-07-31 07:10:00.0 UTC</nextRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <createdBy>admin</createdBy>
+  <modifiedBy>admin</modifiedBy>
+  <cluster id="12">
+    <name>Non Production</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="13">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="14">
+    <name>1010608428427084</name>
+    <start id="15">2020-07-28 04:10:00.0 UTC</start>
+    <interval>3600000</interval>
+    <repeatCount>-1</repeatCount>
+  </trigger>
+  <revisionNumber>local</revisionNumber>
+  <lastModified id="16">2020-07-28 05:19:48.450 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>
